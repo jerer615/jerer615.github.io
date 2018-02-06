@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #result{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <button id="start">我是按鈕</button>
+    <button id="end">我也是按鈕</button>
+    <img id="result" src="http://www.twgreatdaily.com/imgs/image/41/4198534.jpg" alt="">
+    <span>hello</span>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $("#start").click(function(){
+            $("#end").trigger( "click" );
+        })
+        $("#end").click(function(){
+            $("#result").fadeToggle();
+        })
+    </script>
+</body>
+</html>
